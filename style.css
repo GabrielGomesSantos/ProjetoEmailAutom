@@ -65,8 +65,9 @@ button:hover {
 }
 
 .caixa-email label, .caixa-email input {
-    display: inline-block;
+    display: flex;
     margin-bottom: 10px;
+    margin-right: 90px;
 }
 
 .caixa-email input {
@@ -74,18 +75,16 @@ button:hover {
     margin-right: 5px; /* Adiciona um espaço à direita do input */
 }
 
-.caixa-email button {
+.plus {
     position: absolute;
-    right: 0;
-    top: 0;
-}
-
-
-.botoes {
-    margin-bottom: 30px;
+    right: 25px;
+    top: 30px;
 }
 
 .remover {
+    position: absolute;
+    right: -25px;
+    top: 30px;
     background-color: #e74c3c; /* Vermelho */
 }
 
