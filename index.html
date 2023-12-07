@@ -1,113 +1,51 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ecf0f5;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar emails</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enviar emails</h1>
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
+        <form action="emailsAutomatizado.php" method="post">
+        
+        <div id="emails-container">
+            
+            <div class="caixa-email">
+                    <label for="email1">Insira o primeiro e-mail:</label>
+                    <input type="email" id="email1" name="emails[]" required>
+                    <div class="botoes">
+                    <button class="plus" type="button" onclick="adicionarEmail()">+</button>
+                    <button  class="remover" type="button" onclick="removerUltimoEmail()">-</button>
+                </div>
+                 
+                
+                </div>
 
-h1 {
-    color: #3498db;
-}
+                
+            </div>
 
-form {
-    max-width: 400px;
-    margin: 20px;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
+            <div class="template">
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: #3498db;
-}
+                <label for="template">Escolha o template:</label>
 
-input,
-select {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
-    display: inline-block;
-}
+                <select id="template" name="template" required>
+                    <option value="template1">Template 1</option>
+                    <option value="template2">Template 2</option>
+                </select>
 
-button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-.caixa-email {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.caixa-email label, .caixa-email input {
-    display: flex;
-    margin-bottom: 10px;
-    margin-right: 90px;
-}
-
-.caixa-email input {
-    width: calc(70% - 20px);
-    margin-right: 5px; /* Adiciona um espaço à direita do input */
-}
-
-.plus {
-    position: absolute;
-    right: 25px;
-    top: 30px;
-}
-
-.remover {
-    position: absolute;
-    right: -25px;
-    top: 30px;
-    background-color: #e74c3c; /* Vermelho */
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ecf0f5;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
+            </div>    
 
 
+            <button type="submit">Enviar Convite</button>
 
-body {
-    background-color: #666;
-}
+        </form>
+    </div>
+
+    <!-- Referencie seu arquivo JavaScript -->
+    <script src="dinamicas.js"></script>
+</body>
+</html>
